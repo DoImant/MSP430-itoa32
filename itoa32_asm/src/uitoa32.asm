@@ -20,12 +20,12 @@
 ;
 ;-------------------------------------------------------------------------------
 
-      	.cdecls C,NOLIST, "msp430.h"	; Processor specific definitions
+        .cdecls C,NOLIST, "msp430.h"  ; Processor specific definitions
       
 ;-------------------------------------------------------------------------------
-        .global uitoa32             ; Declare symbol to be exported
-        .ref __mspabi_remul         ; Ref to toolchain helper function from rts430_eabi
-        .ref strrev                 ; Ref to external function for exchanging chars (string reverse).
+        .global uitoa32               ; Declare symbol to be exported
+        .ref __mspabi_remul           ; Ref to toolchain helper function from rts430_eabi
+        .ref strrev                   ; Ref to external function for exchanging chars (string reverse).
 ;-------------------------------------------------------------------------------
     .if $DEFINED(__LARGE_CODE_MODEL__)
 	.asg RETA, RET
