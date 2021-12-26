@@ -17,6 +17,7 @@ required by the two functions itoa32 / uitoa32. However, it can also be used<br>
 independently of the two functions.
 
 ## Usefull Documentation
+* [MSP430x2xx Family User's Guide](https://www.ti.com/lit/ug/slau144j/slau144j.pdf)
 * [MSP430 Optimizing C/C++ Compiler](https://www.ti.com/lit/ug/slau132y/slau132y.pdf)<br>
 * [MSP430 Assembly Language Tools](https://www.ti.com/lit/pdf/SLAU131Y)<br>
 * [MSP430 Embedded Application Binary Interface (Rev. A)](https://www.ti.com/lit/pdf/slaa534)<br>
