@@ -36,7 +36,7 @@ STACK_USED .set 2
     .endif
 ;-------------------------------------------------------------------------------
 
-        .sect ".text:strrev"      ; Code is relocatable
+        .sect ".text:strrev"        ; Code is relocatable
 strrev: .asmfunc stack_usage(STACK_USED + RETADDRSZ)  ; Parameter StrBuf-Addr in R12, Strlen in R12
         ADD.W   R12, R13            ; Calc most right address of char-array
                                     ; most left address in R12, most right address in R13
@@ -49,7 +49,7 @@ exchange_loop:
         INC.W   R12                 ; increment left address
         MOV.B   R15,0xFFFF(R12)     ; write saved char (tmp) to actual left addr. -1
         CMP.W   R13, R12            ; check if R13 >= R12 -> if so, anything is done
-        JLO exchange_loop         ; R13 isn't >= R12 -> next iteration.
+        JLO exchange_loop           ; R13 isn't >= R12 -> next iteration.
 rev_end:
         RET
         .endasmfunc
