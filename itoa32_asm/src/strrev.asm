@@ -45,9 +45,9 @@ strrev: .asmfunc stack_usage(STACK_USED + RETADDRSZ)  ; Parameter StrBuf-Addr in
 exchange_loop:
         MOV.B   @R13,R15            ; save char (tmp)
         DEC.W   R13                 ; decrement right address
-        MOV.B   @R12,0x0001(R13)    ; write char from actual left addr. to actual addr. +1
+        MOV.B   @R12,0x0001(R13)    ; write char from actual left addr. to actual right addr. +1
         INC.W   R12                 ; increment left address
-        MOV.B   R15,0xFFFF(R12)     ; write saved char (tmp) to actual right addr. -1
+        MOV.B   R15,0xFFFF(R12)     ; write saved char (tmp) to actual left addr. -1
         CMP.W   R13, R12            ; check if R13 >= R12 -> if so, anything is done
         JLO exchange_loop         ; R13 isn't >= R12 -> next iteration.
 rev_end:
