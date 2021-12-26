@@ -1,0 +1,9 @@
+/.git/
+/Debug/
+/Release/
+/Backups/
+/targetConfigs/
+/.launches/
+/.settings/
+/*.cmd
+/*.ld
